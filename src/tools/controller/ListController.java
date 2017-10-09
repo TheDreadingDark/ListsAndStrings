@@ -92,8 +92,9 @@ public class ListController
 	{
 		myKahoots.add(0, new Kahoot("Dave", 8, "Plants"));
 		Kahoot removed = myKahoots.remove(1);
-//		add(7, removed)
-		
+		myKahoots.add(6, removed);
+		popup.displayText("The creator of the first Kahoot is " + myKahoots.get(0).getCreator());
+//		for (int )
 	}	
 	
 	public ArrayList<Kahoot> getMyKahoots()
