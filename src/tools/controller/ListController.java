@@ -20,9 +20,9 @@ public class ListController
 	{
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
-		fillTheList();
-		showTheList();
-		changeTheList();
+//		fillTheList();
+//		showTheList();
+//		changeTheList();
 		ListsPrac();
 	}
 	
@@ -91,6 +91,8 @@ public class ListController
 	private void ListsPrac()
 	{
 		myKahoots.add(0, new Kahoot("Dave", 8, "Plants"));
+		Kahoot removed = myKahoots.remove(1);
+		add(7, removed)
 		
 	}	
 }
