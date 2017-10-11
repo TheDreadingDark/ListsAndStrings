@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import tools.model.Kahoot;
 import tools.view.PopupDisplay;
 
-public class ListController
+public class Controller
 {
 	private List<Kahoot> myKahoots;
 	private PopupDisplay popup;
 	
-	public ListController()
+	public Controller()
 	{
 		myKahoots = new ArrayList<Kahoot>();
 		popup = new PopupDisplay();
@@ -100,5 +100,25 @@ public class ListController
 	public ArrayList<Kahoot> getMyKahoots()
 	{
 		return (ArrayList<Kahoot>)myKahoots;
+	}
+	
+	public PopupDisplay getPopup()
+	{
+		return popup;
+	}
+	
+	public int findMaxLength(ArrayList<String> myList)
+	{
+		int max= 0;
+		
+		for (int index = 0; index < myList.size(); index++)
+		{
+			if (myList.get(index).length() > max)
+			{
+				max = myList.get(index).length();
+			}
+		}
+		
+		return max;
 	}
 }
